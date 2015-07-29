@@ -10,7 +10,6 @@ $EM_CONF[$_EXTKEY] = array(
     'constraints' => array(
         'depends' => array(
             'typo3' => '6.2.13-7.99.99',
-            'css_styled_content' => '6.2.0-7.99.99',
         ),
         'conflicts' => array(
             'themes' => '*',
