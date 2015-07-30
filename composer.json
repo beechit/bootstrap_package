@@ -34,7 +34,8 @@
   "autoload": {
     "psr-4": {
       "BK2K\\BootstrapPackage\\": "Classes"
-    }
+    },
+    "files": ["Contrib/less.php/Autoloader.php"]
   },
 
   "replace": {
