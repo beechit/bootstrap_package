@@ -1,3 +1,9 @@
+lib.fluidContent{
+	templateRootPaths.120 = EXT:bootstrap_package/Resources/Private/Templates/ContentElements/
+	partialRootPaths.120 = EXT:bootstrap_package/Resources/Private/Partials/ContentElements/
+}
+
+
 ###########################
 #### RESPONSIVE IMAGES ####
 ###########################

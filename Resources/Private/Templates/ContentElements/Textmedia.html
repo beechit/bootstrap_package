@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:ce="http://typo3.org/ns/TYPO3/CMS/Frontend/ViewHelpers" data-namespace-typo3-fluid="true">
+<div id="c{data.uid}" {ce:attribute.class(names: {0: '{ce:format.layoutClass(key: \'{data.layout}\')}', 1: '{ce:format.behaviourClasses(keys: \'{data.behaviour}\', mapping: \'{settings.behaviour.classNameMapping}\')}'})}>
+
+	<f:if condition="{gallery.position.noWrap}">
+		<f:then>
+			<div class="{f:if(condition: gallery.position.noWrap, then:'image-header-{data.header_layout} ')}image-beside-{gallery.position.horizontal} image-{f:if(condition: gallery.position.noWrap, then: 'beside', else:gallery.position.vertical)}">
+		</f:then>
+		<f:else>
+			<f:render partial="Header" arguments="{_all}" />
+			<div class="{f:if(condition: gallery.position.noWrap, then:'image-header-{data.header_layout} ')}image{f:if(condition: '{gallery.position.vertical} != \'intext\'', else: '-intext')}-{gallery.position.horizontal} image-{f:if(condition: gallery.position.noWrap, then: 'beside', else:gallery.position.vertical)}">
+		</f:else>
+	</f:if>
+
+
+		<f:if condition="{gallery.position.vertical} != 'below'">
+			<f:render partial="MediaGallery" arguments="{_all}" />
+		</f:if>
+
+		<div class="text">
+
+			<f:if condition="{gallery.position.noWrap}">
+				<f:render partial="Header" arguments="{_all}" />
+			</f:if>
+
+			<f:format.html>{data.bodytext}</f:format.html>
+		</div>
+
+		<f:if condition="{gallery.position.vertical} == 'below'">
+			<f:render partial="MediaGallery" arguments="{_all}" />
+		</f:if>
+
+	</div>
+
+	<f:render partial="Footer" arguments="{_all}" />
+</div>
+</html>
