@@ -9,10 +9,10 @@
 		<f:if condition="{gallery.count.files} > 1">
 			<f:then>
 				<f:for each="{gallery.rows}" as="row">
-					<div class="ce-row">
+					<div class="image-row">
 						<f:for each="{row.columns}" as="column">
 							<f:if condition="{column.media}">
-								<div class="ce-column">
+								<div class="image-column {f:render(section:'columnClass', arguments:{gallery:gallery})}">
 									<f:render section="MediaItem" arguments="{_all}" />
 								</div>
 							</f:if>
@@ -88,5 +88,7 @@
 		title="{column.media.title}"
 	/>
 </f:section>
+
+<f:section name="columnClass"><f:switch expression="{gallery.count.columns}"><f:case value="2">col-md-6</f:case><f:case value="3">col-md-4 col-sm-4 col-xs-4</f:case><f:case value="4">col-md-3 col-sm-3 col-xs-6</f:case><f:case value="5">col-md-2 col-sm-2 col-xs-4</f:case><f:case default="true">col-md-12</f:case></f:switch></f:section>
 
 </html>
