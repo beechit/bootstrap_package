@@ -1,7 +1,7 @@
 ######################
 #### DEPENDENCIES ####
 ######################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:frontend/Configuration/TypoScript/Static/constants.txt">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:frontend/Configuration/TypoScript/Static/constants.txt">
 
 
 ############################

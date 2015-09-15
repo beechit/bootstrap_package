@@ -1,5 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:ce="http://typo3.org/ns/TYPO3/CMS/Frontend/ViewHelpers" data-namespace-typo3-fluid="true">
-<div id="c{data.uid}" {ce:attribute.class(names: {0: '{ce:format.layoutClass(key: \'{data.layout}\')}', 1: '{ce:format.behaviourClasses(keys: \'{data.behaviour}\', mapping: \'{settings.behaviour.classNameMapping}\')}'})}>
+<div id="c{data.uid}"{f:if(condition: layout, then: ' class="{layout}"')}>
 
 	<f:if condition="{gallery.position.noWrap}">
 		<f:then>
